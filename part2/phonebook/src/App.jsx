@@ -36,6 +36,9 @@ const App = () => {
         setPersons(persons.concat(changedPersons))
         showingMessage(`added ${newName}`)
       })
+      .catch(error=>{
+        showingMessage(error.response.data.error)
+      })
     setNewName("")
     setNumber("") 
   }

@@ -1,6 +1,7 @@
 const Notification = ({message}) =>{
     return(
-        <div className= {message.includes('deleted')?"update error":"update"}>
+        <div className= {(message.includes('deleted')||message.includes('failed'))
+                 ?"update error":"update"}>
             {message}
         </div>
     )
